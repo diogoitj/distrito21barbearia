@@ -33,10 +33,12 @@ i {
   from {
     transform: translateY(0) scale(1);
   }
+
   to {
     transform: translateY(-8px) scale(1.1);
   }
 }
+
 .header-button {
   border: 1px solid #ffffff;
   padding: 8px 24px;
@@ -65,18 +67,22 @@ i {
     align-items: center;
     justify-content: center;
   }
+
   .header-content i {
     margin-top: 16px;
     font-size: 34px;
   }
+
   .header-logo img {
     width: 160px;
     margin-top: 46px;
   }
+
   .header-button {
     display: none;
   }
 }
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -112,12 +118,14 @@ i {
   justify-content: center;
   padding: 14px;
 }
+
 .hero h1 {
   text-align: center;
   line-height: 150%;
   max-width: 940px;
   font-size: 48px;
 }
+
 .hero p {
   text-align: center;
   margin: 14px 0;
@@ -133,7 +141,26 @@ i {
   margin: 14px 0;
 }
 
+.button-contact-servicos {
+  padding: 5px 5px;
+  color: #ffffff;
+  background-color: #D94140;
+  border: 0;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0px 0;
+  text-align: center;
+}
+
 .button-contact:hover {
+  animation: scaleButton 0.8s alternate infinite;
+}
+
+.button-contact-servicos:hover {
+  animation: scaleButton 0.8s alternate infinite;
+}
+
+.button-contact-servicos-descricao:hover {
   animation: scaleButton 0.8s alternate infinite;
 }
 
@@ -141,28 +168,53 @@ i {
   from {
     transform: scale(1);
   }
+
   to {
     transform: scale(1.07);
   }
 }
+
 @media screen and (max-width: 768px) {
   .hero {
     min-height: 60vh;
   }
+
   .hero h1 {
     font-size: 34px;
     padding: 0 14px;
     width: 100%;
   }
+
   .hero p {
     font-size: 14px;
   }
+
+  .haircuts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 0 44px 34px 44px;
+  }
+
+  .haircut {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+  }
+
 }
+
 @media screen and (max-width: 480px) {
   .hero h1 {
     font-size: 24px;
   }
 }
+
 .about {
   background-color: #06121E;
   overflow: hidden;
@@ -176,6 +228,7 @@ i {
   gap: 14px;
   padding: 34px, 14px, 64px, 14px;
 }
+
 .about-content img {
   max-width: 570px;
 }
@@ -188,6 +241,7 @@ i {
   font-size: 38px;
   margin-bottom: 24px;
 }
+
 .about-description p {
   margin-bottom: 14px;
   line-height: 150%;
@@ -198,6 +252,7 @@ i {
     flex-direction: column;
   }
 }
+
 .services {
   background-color: #ffffff;
   color: #232224;
@@ -222,33 +277,60 @@ i {
   max-width: 780px;
 }
 
-.haircuts {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  padding: 0 44px 34px 44px;
+@media (max-width: 768px) {
+  /*celular*/
+  .haircuts {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      padding: 0 44px 34px 44px;
+    }
+  
+    .haircut {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+      overflow: hidden;
+    }
 }
 
-.haircut {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
-  overflow: hidden;
+@media (min-width: 769px) {
+  /*desktop*/
+  .haircuts {
+    display: flex;
+    /* Torna a seção um container flexbox */
+    flex-wrap: wrap;
+    /* Permite quebra de linha */
+    justify-content: space-between;
+    /* Distribui uniformemente */
+    width: 100%;
+    /* Largura total para evitar overflow */
+    margin: 2vw;
+  }
+
+  .haircut {
+    /* Estilos existentes do haircut */
+    width: calc(25% - 2vw);
+    /* Define a largura de cada haircut */
+    margin: 5px;
+    /* Adiciona margem entre os haircuts */
+  }
 }
+
 .haircut img {
   width: 100%;
   max-width: 354px;
   transition: transform 0.2s;
 }
 
-.haircut img:hover {
+/*.haircut img:hover {
   transform: scale(1.2);
   z-index: 1;
-}
+}*/
 
 .haircut-info {
   width: 100%;
@@ -272,10 +354,12 @@ i {
   .haircuts {
     flex-direction: column;
   }
+
   .haircut {
     max-width: 740px;
   }
 }
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -298,10 +382,12 @@ i {
   right: 24px;
   z-index: 99;
 }
+
 .btn-whatsapp img {
   max-width: 74px;
   transition: transform 0.4s;
 }
+
 .btn-whatsapp img:hover {
   transform: scale(1.1);
 }
@@ -331,6 +417,7 @@ i {
     max-width: 64px;
   }
 }
+
 body {
   font-family: "Sora", sans-serif;
   width: 100%;
@@ -354,4 +441,6 @@ img {
 a {
   cursor: pointer;
   text-decoration: none;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
